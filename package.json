@@ -1,10 +1,11 @@
 {
   "name": "config-parser",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "最好用的配置加载器",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "cover": "istanbul cover _mocha"
   },
   "repository": {
     "type": "git",

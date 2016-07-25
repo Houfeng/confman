@@ -1,4 +1,0 @@
-#name: yaml
-- $require child
-- $require ./child
-- $require child.yml

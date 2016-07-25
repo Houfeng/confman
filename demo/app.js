@@ -1,4 +1,4 @@
-const parser = require('../');
+const configParser = require('../');
 
-const configs = parser.load(`${__dirname}/configs`);
-console.log(configs);
+const configs = configParser.load(`${__dirname}/../test/configs`);
+console.log(JSON.stringify(configs));
