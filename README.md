@@ -1,5 +1,5 @@
 # 一句话介绍
-confman 是一个强大的配置文件加载器，无论你喜欢 yaml 、json、cson、ini、toml 还是 js，都能满足你的愿望，并且更加简单、更加强大。
+confman 是一个强大的配置文件加载器，无论你喜欢 yaml 、json、cson、xml、ini、toml 还是 js，都能满足你的愿望，并且更加简单、更加强大。
 
 [![npm version](https://badge.fury.io/js/confman.svg)](http://badge.fury.io/js/confman)
 [![Build Status](https://travis-ci.org/Houfeng/confman.svg?branch=master)](https://travis-ci.org/Houfeng/confman) 

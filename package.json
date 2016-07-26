@@ -1,6 +1,6 @@
 {
   "name": "confman",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "最好用的配置加载器",
   "main": "./lib/index.js",
   "scripts": {
@@ -26,6 +26,7 @@
     "cson-parser": "^1.3.3",
     "ini-parser": "0.0.2",
     "js-yaml": "^3.6.1",
+    "pixl-xml": "^1.0.7",
     "real-utils": "0.0.1",
     "toml": "^2.3.0"
   },
