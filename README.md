@@ -1,11 +1,11 @@
 # 一句话介绍
-confman 是一个强大的配置文件加载器，无论你喜欢 yaml 、json、cson、ini、properties、plist、toml、xml 还是 js，都能满足你的愿望，并且更加简单、更加强大。
+confman 是一个强大的配置文件加载器，无论你喜欢 yaml 、cson、json、properties、plist、ini、toml、xml 还是 js，都能满足你的愿望，并且更加简单、更加强大。
 
 [![npm version](https://badge.fury.io/js/confman.svg)](http://badge.fury.io/js/confman)
 [![Build Status](https://travis-ci.org/Houfeng/confman.svg?branch=master)](https://travis-ci.org/Houfeng/confman) 
 
 # 支持的特性
-- 支持多种配置文件格式，默认包括 yaml/json/cson/ini/properties/plist/toml/xml/js 
+- 支持多种配置文件格式，默认包括 yaml/cson/json/properties/plist/ini/toml/xml/js 
 - 支持配置文件相互引用，无论何种格式都可以「引用其它任意格式」的配置文件
 - 支持「基于目录」的多文件配置
 - 支持「环境配置」，区分加载生产、测试等不同的配置
