@@ -7,9 +7,11 @@ Parser.loaders = [
   require('./lib/loaders/yaml'),
   require('./lib/loaders/cson'),
   require('./lib/loaders/json'),
-  require('./lib/loaders/xml'),
+  require('./lib/loaders/properties'),
+  require('./lib/loaders/plist'),
   require('./lib/loaders/ini'),
   require('./lib/loaders/toml'),
+  require('./lib/loaders/xml'),
   require('./lib/loaders/js'),
 ];
 

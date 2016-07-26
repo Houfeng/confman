@@ -27,6 +27,8 @@
     "ini-parser": "0.0.2",
     "js-yaml": "^3.6.1",
     "pixl-xml": "^1.0.7",
+    "plist": "^1.2.0",
+    "properties": "^1.2.1",
     "real-utils": "0.0.1",
     "toml": "^2.3.0"
   },
