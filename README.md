@@ -5,7 +5,7 @@ confman 是一个强大的配置文件加载器，无论你喜欢 yaml 、json�
 [![Build Status](https://travis-ci.org/Houfeng/confman.svg?branch=master)](https://travis-ci.org/Houfeng/confman) 
 
 # 支持的特性
-- 支持多种配置文件格式，默认包括 yaml/json/cson/ini/toml/js 
+- 支持多种配置文件格式，默认包括 yaml/json/cson/xml/ini/toml/js 
 - 支持配置文件相互引用，无论何种格式都可以「引用其它任意格式」的配置文件
 - 支持「基于目录」的多文件配置
 - 支持「环境配置」，区分加载生产、测试等不同的配置

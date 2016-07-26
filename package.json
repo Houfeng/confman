@@ -1,6 +1,6 @@
 {
   "name": "confman",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "最好用的配置加载器",
   "main": "./lib/index.js",
   "scripts": {
