@@ -101,7 +101,7 @@ confman.loaders.push(require('your-loader-path'));
 
 # 自定义扩展名
 
-方式一:
+方式一，映射到一个已经支持（添加注册到 confman）的 loader
 ```js
 confman.loaders.push({
   extname: '.xxx',
@@ -109,7 +109,7 @@ confman.loaders.push({
 });
 ```
 
-方式二:
+方式二，映射到一个自定义 loader 
 ```js
 confman.loaders.push({
   extname: '.xxx',
