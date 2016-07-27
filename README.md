@@ -41,7 +41,7 @@ console.log(configs);
 $ NODE_ENV=prod node index.js 
 ```
 
-通过指定 ```NODE_ENV``` 可以加载指定的「环境配置文件 config.prod.ymal」，并和「默认配置 config.yaml」进行合并,
+通过指定 ```NODE_ENV``` 可以加载指定的「环境配置文件 config.prod.yaml」，并和「默认配置 config.yaml」进行合并,
 如果有相同的配置，「环境配置会覆盖默认配置」
 
 #### 配置文件相互引用
@@ -81,7 +81,7 @@ const configs = confman.load(`${__dirname}/config`);
 console.log(configs);
 ```
 
-# 扩展新格式
+# 添加新格式
 其实，多数情况你不需要这么做，如果确实有需要，你可这样编写一个自定义 ```loader```
 
 ```js
@@ -99,9 +99,9 @@ module.exports = {
 confman.loaders.push(require('your-loader-path'));
 ```
 
-# 自定义扩展名
+# 新的扩展名
 
-方式一，映射到一个已经支持（添加注册到 confman）的 loader
+方式一，映射到一个已经支持（指已注册的 loader）的 loader
 ```js
 confman.loaders.push({
   extname: '.xxx',
