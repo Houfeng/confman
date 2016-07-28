@@ -1,5 +1,5 @@
 # 一句话介绍
-confman 是一个强大的配置文件加载器，无论你喜欢 yaml 、cson、json、properties、plist、ini、toml、xml 还是 js，都能满足你的愿望，并且更加简单、更加强大。
+Confman 是一个强大的配置文件加载器，无论你喜欢 yaml 、cson、json、properties、plist、ini、toml、xml 还是 js，都能满足你的愿望，并且更加简单、更加强大。
 
 [![npm version](https://badge.fury.io/js/confman.svg)](http://badge.fury.io/js/confman)
 [![Build Status](https://travis-ci.org/Houfeng/confman.svg?branch=master)](https://travis-ci.org/Houfeng/confman) 
@@ -94,7 +94,7 @@ module.exports = {
 };
 ```
 
-添加自定义 loader
+注册自定义 loader
 ```js
 confman.loaders.push(require('your-loader-path'));
 ```
@@ -116,3 +116,60 @@ confman.loaders.push({
   loader: require('your-loader-path')
 });
 ```
+
+# 内置的指令
+
+如上边用到的 $require，Confman 允许使用指令完成某些配置，内置的指令包括:
+
+- $require 引用指令，可用引用其它配置文件，参数为相对于当前文件的相对路径或绝对路径
+- $calc 计算指令，可用计算一个表达式，如 $calc root.baseUrl+"/xxx" (表达式中可用变量有 root:根对象，parent:父对象，self:当前对象)
+- $read 读取指令，可用于读取一个文本文件，参数为相对于当前文件的相对路径或绝对路径
+
+示例 example.yaml
+```yaml
+name: example
+test1: $require ./test1.json
+test2: $read ./test2.txt
+test3: $calc root.name + ":test3"
+```
+
+假如 ```test1.json``` 的内容为 ```{ "name": "test1" }```，```test2.txt``` 的内容为 ```my name is test2```,
+通过 ```Confman.load('./example')``` 加载 ```example``` 的结果为：
+
+```json
+{
+  "name": "example",
+  "test1": { "name": "test1" },
+  "test2": "my name is test2",
+  "test3": "example:test3"
+}
+```
+
+# 自定义指令
+
+指令的基码代码结构，如下：
+
+```js
+module.exports = {
+  name: 'xxx',
+  exec: function(context){
+    //context.fromPath 来自哪个配置文件
+    //context.parser 当前 Confman 实例
+    //context.root 根对象
+    //context.parent 父对象
+    //context.self 当前对象
+    //context.name 配置属性名
+    //context.value 指令后的值
+    return {} //返回值为指令执行结果
+  }
+};
+```
+
+注册自定义指令
+```js
+confman.directives.push(require('your_directive_path'));
+```
+
+# 其它的问题
+- 新的建议或 Bug 请使用 isseus 反馈
+- 贡献代码，请使用 Pull Request，需一并提交相关测试并且不能低于现有覆盖率
