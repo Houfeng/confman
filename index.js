@@ -1,5 +1,7 @@
 var Parser = require('./lib/parser');
 
+
+
 /**
  * 添加默认 loaders
  **/
@@ -16,6 +18,15 @@ Parser.loaders = [
 ];
 
 /**
+ * 添加默认 directives
+ **/
+Parser.directives = [
+  require('./lib/directives/require'),
+  require('./lib/directives/calc'),
+  require('./lib/directives/read'),
+];
+
+/**
  * 创建默认实例
  **/
 var parser = new Parser();
@@ -29,5 +40,10 @@ parser.Parser = Parser;
  * 在默认实例上挂载 loaders
  **/
 parser.loaders = Parser.loaders;
+
+/**
+ * 在默认实例上挂载 directives
+ **/
+parser.directives = Parser.directives;
 
 module.exports = parser;

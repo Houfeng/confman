@@ -1,3 +1,5 @@
 module.exports = {
-  name: 'index'
+  name: 'index',
+  calc: '$calc (root.name+":ok")',
+  file: '$read ./test14.txt'
 };
