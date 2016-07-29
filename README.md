@@ -83,6 +83,7 @@ console.log(configs);
 ```
 
 # 添加新格式
+
 其实，多数情况你不需要这么做，如果确实有需要，你可这样编写一个自定义 ```loader```
 
 ```js
@@ -102,7 +103,7 @@ confman.loaders.push(require('your-loader-path'));
 
 # 新的扩展名
 
-方式一，映射到一个已经支持（指已注册的 loader）的 loader
+方式一，映射到一个已经添加的 loader
 ```js
 confman.loaders.push({
   extname: '.xxx',
@@ -110,7 +111,7 @@ confman.loaders.push({
 });
 ```
 
-方式二，映射到一个自定义 loader 
+方式二，直接映射到一个未添加的自定义 loader 
 ```js
 confman.loaders.push({
   extname: '.xxx',
@@ -120,11 +121,11 @@ confman.loaders.push({
 
 # 内置的指令
 
-如上边用到的 $require，Confman 允许使用指令完成某些配置，内置的指令包括:
+如上边用到的 ```$require```，Confman 允许使用指令完成某些配置，内置的指令包括:
 
-- $require 引用指令，可用引用其它配置文件，参数为相对于当前文件的相对路径或绝对路径
-- $calc 计算指令，可用计算一个表达式，如 $calc root.baseUrl+"/xxx" (表达式中可用变量有 root:根对象，parent:父对象，self:当前对象)
-- $read 读取指令，可用于读取一个文本文件，参数为相对于当前文件的相对路径或绝对路径
+- $require 引用指令，用于引用其它配置文件，参数为相对于当前文件的相对路径或绝对路径
+- $calc 计算指令，用于计算一个表达式，如 $calc root.baseUrl+"/xxx" (表达式中可用变量有 root:根对象，parent:父对象，self:当前对象)
+- $read 读取指令，用于读取一个文本文件，参数为相对于当前文件的相对路径或绝对路径
 
 示例 example.yaml
 ```yaml
@@ -148,7 +149,7 @@ test3: $calc root.name + ":test3"
 
 # 自定义指令
 
-指令的基码代码结构，如下：
+编写一个自定义指令的代码如下：
 
 ```js
 module.exports = {
