@@ -1,6 +1,5 @@
-var Parser = require('./lib/parser');
-
-
+const Parser = require('./lib/parser');
+const webpackPlugin = require('./lib/webpack-plugin');
 
 /**
  * 添加默认 loaders
@@ -29,7 +28,7 @@ Parser.directives = [
 /**
  * 创建默认实例
  **/
-var parser = new Parser();
+const parser = new Parser();
 
 /**
  * 在默认实例上挂载 Parser
@@ -45,5 +44,10 @@ parser.loaders = Parser.loaders;
  * 在默认实例上挂载 directives
  **/
 parser.directives = Parser.directives;
+
+/**
+ * 在默认实例上挂载 webpackPlugin
+ **/
+parser.webpackPlugin = webpackPlugin(parser);
 
 module.exports = parser;
