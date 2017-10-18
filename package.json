@@ -1,6 +1,6 @@
 {
   "name": "confman",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "最好用的配置加载器",
   "main": "./lib/index.js",
   "scripts": {
@@ -31,7 +31,7 @@
     "plist": "^1.2.0",
     "properties": "^1.2.1",
     "toml": "^2.3.1",
-    "vmodule-webpack-plugin": "^1.0.0"
+    "vmodule-webpack-plugin": "^1.0.7"
   },
   "devDependencies": {
     "istanbul": "^0.4.4",
