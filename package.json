@@ -1,6 +1,6 @@
 {
   "name": "confman",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "最好用的配置加载器",
   "main": "./lib/index.js",
   "scripts": {
@@ -22,16 +22,16 @@
   },
   "homepage": "https://github.com/Houfeng/confman#readme",
   "dependencies": {
-    "cify": "^2.1.1",
+    "cify": "^2.1.12",
     "cson-parser": "^1.3.5",
     "ini-parser": "0.0.2",
-    "js-yaml": "^3.7.0",
-    "ntils": "^2.0.3",
-    "pixl-xml": "^1.0.10",
+    "js-yaml": "^3.10.0",
+    "ntils": "^3.1.9",
+    "pixl-xml": "^1.0.13",
     "plist": "^1.2.0",
     "properties": "^1.2.1",
-    "toml": "^2.3.1",
-    "vmodule-webpack-plugin": "^1.0.7"
+    "toml": "^2.3.3",
+    "vmodule-webpack-plugin": "^1.0.8"
   },
   "devDependencies": {
     "istanbul": "^0.4.4",
